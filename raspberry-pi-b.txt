@@ -1,0 +1,51 @@
+# Instalar o Raspbian 
+
+# Configurar a serial rs232 gpio no raspberry conforme tutoriais da internet
+
+# Ligar os fios:
+
+GND - PORTA GPIO 6 	-	FIO VERMELHO FANGPUSUN
+TX - PORTA GPIO 8 	-	FIO PRETO FANGPUSUN
+RX - PORTA GPIO 10	-	FIO AMARELO FANGPUSUN
+
+# Para certificar do funcionamento rodar o comando: minicom -b 19200 -D /dev/ttyAMA0
+# Terá resposta algo do tipo:
+
+PID	0xA049
+FW	116
+SER#	HQ1542K36ZU
+V	12750
+I	1000
+VPV	10
+PPV	0
+CS	0
+ERR	0
+H19	11487
+H20	361
+H21	1241
+H22	350
+H23	1196
+HSDS	27
+Checksum	?
+
+# APÓS ISSO PODE UTILIZAR O SCRIPT ve.direct.2
+# Comando: ./ve.direct.2  --device=/dev/ttyAMA0 --snapshot
+# Retornará os dados do fangpusun
+
+Firmware version 116 
+Serial number HQ1542K36ZU 
+Voltage    12.750 Volts
+Current    1.000 Amps
+Panel voltage 0.010 Volts
+Panel power 0 Watts
+State of operation 0 
+Error code 0 
+Yield total (user resettable counter) 114.87 kWh
+Yield today 3.61 kWh
+Maximum power today 1241 Watts
+Yield yesterday 3.50 kWh
+Maximum power yesterday 1196 Watts
+Day sequence number (0..364) 27 
+Power      12.75 Watts
+Time       2018-08-27-17:22:33
+Time since engine start infinite
