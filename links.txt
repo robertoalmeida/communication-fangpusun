@@ -8,3 +8,7 @@ https://github.com/physee/Victron.Arduino-ESP8266
 https://github.com/foxharp/ve.direct
 https://github.com/jepefe/bmvmonitor
 https://github.com/karioja/vedirect
+https://dweet.io/
+https://freeboard.io/
+https://youtu.be/uzcL80nT5cU
+
