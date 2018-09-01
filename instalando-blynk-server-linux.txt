@@ -13,44 +13,15 @@ apt-get update && apt-get upgrade -y
 
 apt install software-properties-common dirmngr
 add-apt-repository "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
 apt-get update
 
 apt-get install oracle-java8-jdk
-cd /root
+mkdir /root/Blink/
+cd /root/Blink/
 wget "https://github.com/blynkkk/blynk-server/releases/download/v0.39.4/server-0.39.4-java8.jar"
 
 server.properties: allows you to configure all server settings
-
-#hardware mqtt port
-hardware.mqtt.port=8440
- 
-#hardware ssl port
-hardware.ssl.port=8441
- 
-#hardware plain tcp/ip port
-hardware.default.port=8442
- 
-#http and web sockets port
-http.port=8080
- 
-#https and web sockets port
-https.port=9443
- 
-#application ssl port
-app.ssl.port=8443
-
 mail.properties: allows you to configure the server to send emails
-
-mail.smtp.auth=true
-mail.smtp.starttls.enable=true
-mail.smtp.host=smtp.gmail.com
-mail.smtp.port=587
-mail.smtp.username=EMAIL
-mail.smtp.password=PWD
-
-mkdir /root/Blynk
-mv server-0.39.4-java8.jar /root/Blynk
 
 java -jar server-0.39.4-java8.jar -dataFolder /root/Blynk &
 
